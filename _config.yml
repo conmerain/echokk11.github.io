@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: wukairobin@gmail.com
 description: "关于全栈、摄影与健身 | I am not just a programmer"
 keyword: "I am not just a programmer, echokk11, Wuk"
-url: ""              # your host, for absolute URL
+url: "tech.toughguy.club"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -61,7 +61,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'UA-116919916-1'            # Format: UA-xxxxxx-xx
-ga_domain: 
+ga_domain: tech.toughguy.club
 
 
 
