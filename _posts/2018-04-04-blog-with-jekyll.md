@@ -35,6 +35,8 @@ git push -u origin master
 
 打开浏览器访问地址https://username.github.io 就可以看到Hello World字样
 
+**注意啊username是你自己github的账号，记得替换啊**
+
 ## Jekyll
 上述等于提供了一个免费的空间，但是我们写东西总不能自己去创建HTML文件，然后加CSS，写JS吧。即使懂得这些知识，周而复始的弄也会疲倦。我们的初衷不是专注写文章分享信息，记录自己的技术沉淀的吗，说好的写markdown的文章呢？
 
