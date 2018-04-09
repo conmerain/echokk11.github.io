@@ -40,5 +40,51 @@ git push -u origin master
 
 > Jekyll：别急，我来了
 
+1. 安装ruby
+mac自带ruby但可能版本太低
+```bash
+brew install ruby
+vim ~/.bash_profile
+```
+最后一行加入`export PATH="/usr/local/bin:$PATH"`，因为利用brew安装的软件基本都在/usr/local/bin下，这样也方便使用
+```bash
+which ruby
+ruby version
+gem --version
+```
 
+2. 安装jekyll
+```bash
+gem install jekyll bundle
+jekyll new username.github.io
+cd username.github.io
+bundle exec jekyll serve
+```
+这个时候访问 http://localhost:4000 就可以访问你搭建的网站了
 
+3. 配置
+`_config.yml`文件比较重要，配置一些和网站相关的信息，比如要接入评论系统disqus，需要设置用户名，或者引入百度和谷歌的站长统计需要设置的信息，有一些theme还做好了除墙外twitter和facebook外，微博，知乎，github等账号的设置信息
+
+4. 开始撰写
+在_post下新建文件，名字有约束以年月日开头，中间以英文名字接上，后缀可以是markdown，也可以是md，比如
+`2018-04-01-miss-brother-zhang.md`    
+开头比较注意，需要写一段yml标记语言来说这篇文章，比如
+```yml
+---
+author: Wuk
+date: 2018-04-04 11:42:32+00:00
+layout: post
+title: 利用github-pages和jekyll搭建自己的博客系统
+subtitle: 免费且支持markdown语法的博客搭建
+catalog: true
+tags:
+- github-pages
+- jekyll
+---
+```
+后面就是普通的markdown语法，值得注意的是markdown也有很多方言，这边用的是`kramdown`，反正就是github用的
+
+## 一步到位
+方便起见，省去安装jekyll，你可以直接fork我的博客仓库[echokk11.github.io](https://github.com/echokk11/echokk11.github.io)，或者用zip的方式下载到本地，然后push到你自己的username.github.io仓库，删去我的`_posts`下的文章，修改`_config.yml`的配置就可以直接用了，因为github支持在线编译jekyll，后面就是码字了。
+
+> 我的主题也是fork一个前端大拿的，[huxpro](https://github.com/Huxpro/huxpro.github.io)
