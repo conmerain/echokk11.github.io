@@ -87,4 +87,4 @@ tags:
 ## 一步到位
 方便起见，省去安装jekyll，你可以直接fork我的博客仓库[echokk11.github.io](https://github.com/echokk11/echokk11.github.io)，或者用zip的方式下载到本地，然后push到你自己的username.github.io仓库，删去我的`_posts`下的文章，修改`_config.yml`的配置就可以直接用了，因为github支持在线编译jekyll，后面就是码字了。
 
-> 我的主题也是fork一个前端大拿的，[huxpro](https://github.com/Huxpro/huxpro.github.io)
+> 我的主题也是fork一个前端大拿的，[huxpro](https://github.com/Huxpro/huxpro.github.io)，但我修复一点错误，增加了文章归档页面等
