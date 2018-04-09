@@ -60,7 +60,7 @@ jekyll new username.github.io
 cd username.github.io
 bundle exec jekyll serve
 ```
-这个时候访问 http://localhost:4000 就可以访问你搭建的网站了
+你也可以直接用`jekyll serve`，用bundle的作用貌似浏览效果会和github一致。这个时候访问 http://localhost:4000 就可以访问你搭建的网站了
 
 3. 配置
 `_config.yml`文件比较重要，配置一些和网站相关的信息，比如要接入评论系统disqus，需要设置用户名，或者引入百度和谷歌的站长统计需要设置的信息，有一些theme还做好了除墙外twitter和facebook外，微博，知乎，github等账号的设置信息
@@ -82,9 +82,11 @@ tags:
 - jekyll
 ---
 ```
-后面就是普通的markdown语法，值得注意的是markdown也有很多方言，这边用的是`kramdown`，反正就是github用的
+layout固定post，author作者，date日期时间，title主标题，subtitle副标题，catalog设置文章右边是不是有导航，tags就是标签。
+文章内容就是普通的markdown语法，值得注意的是markdown也有很多方言，这边用的是`kramdown`，反正就是github官方用的
 
 ## 一步到位
 方便起见，省去安装jekyll，你可以直接fork我的博客仓库[echokk11.github.io](https://github.com/echokk11/echokk11.github.io)，或者用zip的方式下载到本地，然后push到你自己的username.github.io仓库，删去我的`_posts`下的文章，修改`_config.yml`的配置就可以直接用了，因为github支持在线编译jekyll，后面就是码字了。
 
-> 我的主题也是fork一个前端大拿的，[huxpro](https://github.com/Huxpro/huxpro.github.io)，但我修复一点错误，增加了文章归档页面等
+> 我的主题也是fork一个前端大拿的，[huxpro](https://github.com/Huxpro/huxpro.github.io)，但我修复一点错误，增加了文章归档页面等    
+> 更多的主题在[jekyllthemes](http://jekyllthemes.org/)
