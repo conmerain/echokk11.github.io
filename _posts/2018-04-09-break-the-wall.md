@@ -53,7 +53,7 @@ sudo less /var/log/shadowsocks.log
 ```bash
 vim /etc/shadowsocks.json
 ```
-```js
+```javascript
 {
     "server":"my_server_ip",
     "server_port":8388,
