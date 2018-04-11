@@ -22,4 +22,9 @@ tags:
 国外VPS选择很多，如linode等。[vultr](https://www.vultr.com/?ref=6891563)是后来建立的公司，性价比很不错，最低配置的主机才2.5刀一个月，但是经常缺货，推荐买5美元的。甚至可以在上面搭建jdk，mysql，tomcat等其他东西也足够自己玩耍。我除了搭建ss翻墙外，还自己搭建了一个[wordpress](https://wordpress.org/)用nginx转发，当作个人博客玩耍，还搭建了[frp](https://github.com/fatedier/frp/blob/master/README_zh.md)做映射工具。
 
 ## shadowsocks
-> 未完待续
+- 貌似debian占用内存少，所以deploy一个debian的vps，节点选择Tokyo，我测过LA等，还是Tokyo稳定
+- 安装git
+```bash
+apt-get update
+apt-get install git
+```
