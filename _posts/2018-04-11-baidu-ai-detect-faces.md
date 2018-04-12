@@ -13,7 +13,7 @@ tags:
 
 ## 是时候展现真正的技术了。
 
-[下载代码，即可开始](https://github.com/echokk11/face-detect)
+[下载代码，即刻开始](https://github.com/echokk11/face-detect)
 
 ## face-detect
 
