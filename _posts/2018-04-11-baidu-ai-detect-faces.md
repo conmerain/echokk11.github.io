@@ -38,7 +38,7 @@ npm run dev
 
 ## 跨域
 已经在`config/index.js`中增加proxyTable配置，实现代理跨域
-```js
+```javascript
 proxyTable: {
     '/oauth/**': {
         target: 'https://aip.baidubce.com',

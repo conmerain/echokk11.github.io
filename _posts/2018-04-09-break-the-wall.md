@@ -87,4 +87,4 @@ ssserver -c /etc/shadowsocks.json
 - 手机端配置这边有一个rules库不错[Shadowrocket-ADBlock-Rules](https://github.com/h2y/Shadowrocket-ADBlock-Rules)
 
 
-> 开始浪吧，，并不是一劳永逸，也有vps被墙(IP被封)的风险，但比起购买的服务性价比不说，稳定多了吧？
+> 开始浪吧，并不是一劳永逸，也有vps被墙(IP被封)的风险，但比起购买的服务性价比不说，稳定多了吧？
