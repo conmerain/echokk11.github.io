@@ -72,7 +72,36 @@ ssserver -c /etc/shadowsocks.json
 此时服务器就会开启一个8388端口，提供ss服务
 
 ## 高级
-[开启BBR加速](https://github.com/iMeiji/shadowsocks_install/wiki/%E5%BC%80%E5%90%AFTCP-BBR%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95)
+上述搭建成功后，已经基本能满足日常需求，如果还有强迫症精益求精，那么还有方法加速，但这个加速我本人觉得影响不是很大。    
+如果是选择debian9操作系统，可以查看内核`uname -a`那么如果已经大于`4.9`，那么后续操作就简单多了
+
+开机后 `uname -r` 看看是不是内核 >= 4.9  
+
+执行 `lsmod | grep bbr`，如果结果中没有 `tcp_bbr` 的话就先执行
+```
+modprobe tcp_bbr
+echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
+```
+
+执行
+```
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+```
+
+保存生效  
+`sysctl -p`  
+
+执行  
+```
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl net.ipv4.tcp_congestion_control
+```
+如果结果都有 `bbr`, 则证明你的内核已开启 bbr  
+
+执行 `lsmod | grep bbr`, 看到有 tcp_bbr 模块即说明 bbr 已启动  
+
+更详细信息，传送门:[开启BBR加速](https://github.com/iMeiji/shadowsocks_install/wiki/%E5%BC%80%E5%90%AFTCP-BBR%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95)
 
 ## Client
 ### 各个平台
