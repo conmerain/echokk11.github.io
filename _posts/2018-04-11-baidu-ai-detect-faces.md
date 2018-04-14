@@ -13,7 +13,7 @@ tags:
 
 ## 是时候展现真正的技术了。
 
-[下载代码，即可开始](https://github.com/echokk11/face-detect)
+[下载代码，即刻开始](https://github.com/echokk11/face-detect)
 
 ## face-detect
 
@@ -38,7 +38,7 @@ npm run dev
 
 ## 跨域
 已经在`config/index.js`中增加proxyTable配置，实现代理跨域
-```js
+```javascript
 proxyTable: {
     '/oauth/**': {
         target: 'https://aip.baidubce.com',

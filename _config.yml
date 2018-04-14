@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: wukairobin@gmail.com
 description: "关于全栈、摄影与健身 | I am not just a programmer"
 keyword: "I am not just a programmer, echokk11, Wuk"
-url: "tech.eegrowup.com"              # your host, for absolute URL
+url: "http://tech.eegrowup.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -86,5 +86,8 @@ service-worker: true
 
 # Friends
 friends: [
-    
+  {
+      title: "小风果果",
+      href: "http://blog.funnynode.com"
+  }
 ]
