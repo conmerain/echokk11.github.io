@@ -52,13 +52,14 @@ stages看自己定义，基本上可以分为这些，如果只做一件事情�
 - 首先jenkins要安装两个插件`gitlab plugin`和`gitlab hook plugin`。系统管理->管理插件，选择可选插件，然后在右上角搜索两个插件安装。
 - 这个时候找到相关的project，配置，找到`构建触发器`，勾起`Build when a change is pushed to GitLab. GitLab webhook URL:`，并且复制下后面
 的url地址    
-![img](/img/in-post/gitlab-hooks-with-jenkins/20180416-001.png)
+![img](/img/in-post/gitlab-hooks-with-jenkins/QQ20180416-190214@2x.png)
 - 点击高级继续设置，需要点击`Generate`生成`token`，其余几个选项，默认是全部分支构建，你也可以用分支名称，甚至正则表达式指定分支构建。    
-![img](/img/in-post/gitlab-hooks-with-jenkins/20180416-004.png)    
+![img](/img/in-post/gitlab-hooks-with-jenkins/QQ20180416-192326@2x.png)    
 还有更有意思的的是你看到上面的`Comment (regex) for triggering a build`没，默认值是`Jenkins please retry a build`，意思就是如果没有
 设置push event触发构建，那么把webhook里的`Comments`勾起来，只要内容是`Jenkins please retry a build`，一样会触发构建。
 - 随后去gitlab对应的项目下，找到`Settings`->`Integrations`，点击Add webhook,填写好上面的URL和token        
-![img](/img/in-post/gitlab-hooks-with-jenkins/20180416-002.png)
-- 点击test->Push events测试，上方出现蓝色背景的字样`Hook executed successfully: HTTP 200`就说明已经配置成功了。
+![img](/img/in-post/gitlab-hooks-with-jenkins/QQ20180416-191450@2x.png)
+- 点击test->Push events测试，上方出现蓝色背景的字样`Hook executed successfully: HTTP 200`就说明已经配置成功了。    
+![img](/img/in-post/gitlab-hooks-with-jenkins/QQ20180416-191751@2x.png)
 - 最后去jenkins查看构建历史，发现已经有了    
-![img](/img/in-post/gitlab-hooks-with-jenkins/20180416-005.png)
+![img](/img/in-post/gitlab-hooks-with-jenkins/QQ20180416-193249@2x.png)
